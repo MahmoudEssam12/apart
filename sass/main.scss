@@ -1,0 +1,138 @@
+/********** main styles *********/
+/***@import url(https://fonts.googleapis.com/css?family=Oswald);****/
+
+/*************** Fonts *********************/
+
+@font-face {
+    font-family: oswald;
+    src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: cairo;
+    src: url(../fonts/cairo/Cairo-Regular.ttf);
+}
+@font-face {
+    font-family: changa;
+    src: url(../fonts/Changa-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: playfair;
+    src: url(../fonts/PlayfairDisplaySC-Regular.ttf);
+}
+@font-face {
+    font-family: nunito;
+    src: url(../fonts/NunitoSans-Regular.ttf);
+}
+
+/*************** Fonts *****************/
+
+$mainBaigColor:#e3c4a8;
+
+/************ mixin ******************/
+
+@mixin scaleXMe($x) {
+    -webkit-transform: scaleX($x);
+    -moz-transform: scaleX($x);
+    -ms-transform: scaleX($x);
+    -o-transform: scaleX($x);
+    transform: scaleX($x);
+  }
+  
+  @mixin scaleMe($s) {
+    -webkit-transform: scale($s);
+    -moz-transform: scale($s);
+    -ms-transform: scale($s);
+    -o-transform: scale($s);
+    transform: scale($s);
+  }
+  
+  @mixin rotateMe($r) {
+    -webkit-transform: rotate($r);
+    -moz-transform: rotate($r);
+    -o-transform: rotate($r);
+    transform: rotate($r);
+  }
+  
+  @mixin transOrigin($o) {
+    -webkit-transform-origin: $o;
+    -moz-transform-origin: $o;
+    -o-transform-origin: $o;
+    transform-origin: $o;
+  }
+  
+  @mixin translatexMe($x) {
+    -webkit-transform: translateX($x);
+    -moz-transform: translateX($x);
+    -o-transform: translateX($x);
+    transform: translateX($x);
+  }
+  
+  @mixin translateyMe($y) {
+    -webkit-transform: translateY($y);
+    -moz-transform: translateY($y);
+    -o-transform: translateY($y);
+    transform: translateY($y);
+  }
+  
+  @mixin transitionMe($t) {
+    -webkit-transition: -webkit-$t;
+    -moz-transition: -moz-$t;
+    -ms-transition: -ms-$t;
+    -o-transition: -o-$t;
+    transition: $t;
+  }
+  
+  @mixin borderdMe($b) {
+    -webkit-border-radius: ($b);
+    -moz-border-radius: ($b);
+    -o-border-radius: ($b);
+    -ms-border-radius: ($b);
+    border-radius: ($b);
+  }
+  
+  /************ mixin ******************/
+
+/********** imported components*******/
+
+
+@import "navbar";
+@import "header";
+@import "apartments";
+@import "body";
+
+/************* multi usable classes *****************/
+h1, h2, h3, h4, h5, h6 {
+  font-family: oswald,cairo, Arial, Helvetica, sans-serif;
+  font-weight: 340;
+  text-transform: uppercase;
+}
+*::selection {
+  background: #000;
+  color: #fff;
+
+}
+.trans {
+  @include transitionMe(all .3s ease-in-out);
+}
+/************* multi usable classes *****************/
+.page.navigation {
+  margin: 50px 0;
+}
+.pagination {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  .page-item {
+    .page-link {
+      margin: 0 8px;
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
+  .page-item:first-child {
+    .page-link {
+      margin-left: 0;
+    }
+  }
+
+}

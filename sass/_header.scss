@@ -1,0 +1,93 @@
+/*********** Header Background ***********/
+.header-background {
+    position: relative;
+    margin: 0 0 40px;
+    z-index: 5;
+    min-height: 619px;
+  
+    .header-info {
+      text-align: center;
+      margin-bottom: 90px;
+  
+      h1 {
+        font-family: oswald;
+        color: #fff;
+        font-size: 4rem;
+        font-weight: normal;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+  
+      }
+  
+      p {
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin: 22px 0;
+      }
+  
+      a {
+        background-color: #e3c4a8;
+        color: #fff;
+        border-radius: 0;
+  
+        &:hover {
+          background-color: #dab08b;
+        }
+      }
+  
+    }
+  }
+
+.card.main {
+  position: relative;
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+  margin: -160px 0;
+  box-shadow: 0 0 37px -5px rgba(0, 0, 0, 0.1);
+  .card-img {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0;
+    }
+  }
+  .card-body {
+    padding: 100px;
+    .card-title {
+      font-weight: 450;
+      margin: 25px 0;
+    }
+    .card-text {
+      font-family: nunito,changa,Arial, Helvetica, sans-serif;
+
+    }
+    .list-info {
+      list-style: none;
+      text-align: left;
+      padding: 0;
+      margin: 30px 0;
+      li {
+        margin: 11px 0;
+        color: #777;
+        strong {
+          color: #000;
+        }
+      }
+    }
+    a {
+      background-color: #e3c4a8;
+      color: #fff;
+      border-radius: 0;
+
+      &:hover {
+        background-color: #dab08b;
+      }
+    }
+  }
+}
+
+  
+  /*********** Header Background ***********/

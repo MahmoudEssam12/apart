@@ -1,0 +1,210 @@
+/************** navbar starts ***************/
+
+.header {
+  background-image: url(../images/hero_bg_2.jpg);
+  min-height: 600px;
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    height: 723px;
+  }
+}
+
+.nav-wrapper {
+  padding: 20px 0 0;
+  z-index: 6;
+  position: relative;
+}
+
+.navbrand {
+  a {
+    font-family: oswald, playfair, cairo, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #fff;
+
+    .dot-text {
+      color: #d09d6e;
+    }
+  }
+}
+
+.site-menu {
+  list-style: none;
+  display: block;
+
+  li {
+    display: inline-block;
+    padding: 20px;
+
+    a {
+      text-decoration: none;
+      font-family: nunito, cairo, Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.6);
+      position: relative;
+      letter-spacing: .06em;
+      @include transitionMe(all .2s ease-in-out);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .has-children {
+    position: relative;
+
+    a {
+      i {
+        font-family: 'themify';
+        margin-left: 5px;
+        font-size: 13px;
+        position: absolute;
+        top: 7px;
+
+      }
+    }
+
+    .dropdown {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      padding: 0;
+      width: 135px;
+      background-color: rgb(255, 255, 255);
+      left: 0;
+      top: 88%;
+      box-shadow: 0 0 11px -4px;
+      width: 160px;
+      padding: 7px;
+      @include translateyMe(15px);
+      @include transitionMe(all .2s ease-in-out);
+
+      li {
+        display: block;
+        text-align: left;
+        padding: 7px 15px;
+
+        a {
+          color: #000;
+          font-size: 17px;
+          @include transitionMe(all .2s ease-in-out);
+
+          &:hover {
+            color: #d09d6e;
+          }
+        }
+
+      }
+    }
+
+    .dropdown.child {
+      left: 153px;
+      top: 5px;
+      @include translateyMe(16px)
+    }
+
+    .has-children.submenu {
+      a {
+        i {
+          font-size: 12px;
+          position: absolute;
+          top: 6px;
+          left: 100px;
+        }
+      }
+
+      .dropdown.child {
+        z-index: 0;
+
+        li {
+          &:hover {
+            a {
+              color: #d09d6e;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        a {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+
+        .dropdown.child {
+          opacity: 1;
+          visibility: visible;
+          @include translateyMe(0);
+        }
+      }
+    }
+
+    .dropdown.arrow-top::before {
+      left: 20%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(4, 137, 219, 0);
+      border-bottom-color: rgb(255, 255, 255);
+      border-width: 10px;
+      margin-left: 0px;
+      bottom: 100%;
+    }
+
+    &:hover {
+      .ul-wrapper {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+
+      .dropdown.arrow-top {
+        opacity: 1;
+        visibility: visible;
+        @include translateyMe(0);
+      }
+    }
+  }
+}
+
+.about-header-page {
+  background-image: url(../images/hero_bg_1.jpg);
+  &::before {
+    height: 600px;
+  }
+  .about-headline {
+    z-index: 5;
+    text-align: center;
+    margin: 150px 0;
+    position: relative;
+    color: #fff;
+    h1 {
+      text-transform: uppercase;
+      font-size: 4rem;
+      font-weight: normal;
+      letter-spacing: .1em;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+/************** navbar ends ***************/
+

@@ -1,0 +1,108 @@
+.section {
+    margin: 4rem 0;
+    padding: 2rem 0;    
+    .office-row-wrapper {
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        h2 {
+            position: relative;
+            letter-spacing: 0.094em;
+            margin-bottom: 38px;
+            &::after {
+                content: "";
+                height: 2px;
+                width: 66px;
+                background-color: $mainBaigColor;
+                position: absolute;
+                bottom: -10px;
+                left: 44%;
+            }
+        }
+        p {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
+
+/************ single page *******/
+
+.layout-wrap {
+    .article-img-wrapper {
+        margin-bottom: 70px;
+        img {
+            width: 100%;
+        }
+    }
+    h3 {
+        margin-bottom: 20px;
+    }
+    &.righter {
+        padding-left: 15px;
+        .popular-posts {
+            margin: 50px 0;
+
+            a {
+                display: block;
+                margin: 10px 0;
+                @include transitionMe(all .3s ease);
+                &:hover {
+                    text-decoration: none;
+                }
+                span {
+                    color: black;
+                }
+            }
+        }
+    }
+    .comments-section{
+        margin: 70px 78px 70px 0;
+        h4 {
+            margin-bottom: 50px;
+        }
+        .all-comments {
+            .comments-list {
+                list-style: none;
+                .comment {
+                    margin: 43px 0 0;
+                    .cimg {
+                        width: 300px;
+                        img {
+                            width: 70px;
+                            border-radius: 50%;
+                        }
+                        h4 {
+                            display: inline-block;
+                            margin: 0 16px;
+                        }
+                        .cdate {
+                            color: #ababab;
+                            margin-top: 15px;
+                        }
+                    }
+                    .comment-body {
+                        .reply-btn {
+                            a {
+                                background: #e3c4a8;
+                                color: #fff;
+                                text-transform: uppercase;
+                                margin-left: 20px;
+                                @include transitionMe(background .3s ease);
+                                &:hover {
+                                    background: #d09d6e;
+                                }
+                            }
+                        }
+                    }
+                    .children {
+                        margin-left: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/************ single page *******/
